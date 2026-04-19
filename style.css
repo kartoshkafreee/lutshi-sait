@@ -1,0 +1,123 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+.palette{
+  display:flex;
+  gap: 10x;
+  margin-bottom: 20px;
+}
+.field {
+  
+    display: grid;
+    grid-template-columns: repeat(10 , 40px);
+    
+}
+.cell{
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+    user-select: none;
+
+}
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+ 
+
+.color-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.target-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+
+.target-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6b6b; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.target-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.selected-color {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+#color-value {
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+#eraser, #clearAll {
+  padding: 10px 15px;
+  margin: 5px;
+}
+.controls {
+      margin: 20px 0;
+    }
+
+    .eraser-btn {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .eraser-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .eraser-btn.active {
+      background: #ffeb3b;
+      border-color: #ffc107;
+      font-weight: bold;
+    }
+
